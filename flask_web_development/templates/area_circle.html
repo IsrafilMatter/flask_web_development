@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Area of Circle{% endblock %}
+{% block content %}
+    <h1>Area of a Circle</h1>
+    <form method="post" class="card">
+        <label for="radius">Radius</label>
+        <input id="radius" name="radius" type="number" step="any" min="0" required>
+        <button type="submit" class="btn">Compute</button>
+    </form>
+    {% if area is not none %}
+        <p>Area: <strong>{{ '%.4f'|format(area) }}</strong></p>
+    {% endif %}
+{% endblock %}
+

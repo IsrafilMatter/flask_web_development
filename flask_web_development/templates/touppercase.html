@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Works | toUpperCase{% endblock %}
+{% block content %}
+    <h1>Convert String to Uppercase</h1>
+
+    <form action="/works" method="post" class="card">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" name="inputString" placeholder="Type here...">
+        <button type="submit" class="btn">Convert</button>
+    </form>
+
+    {% if result %}
+    <p>Converted string: <strong>{{ result }}</strong></p>
+    {% endif %}
+
+    <hr>
+    <h2>More Works</h2>
+    <ul>
+        <li><a href="/areaOfCircle">Area of a Circle</a></li>
+        <li><a href="/areaOfTriangle">Area of a Triangle</a></li>
+    </ul>
+{% endblock %}

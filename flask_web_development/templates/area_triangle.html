@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Area of Triangle{% endblock %}
+{% block content %}
+    <h1>Area of a Triangle</h1>
+    <form method="post" class="card">
+        <label for="base">Base</label>
+        <input id="base" name="base" type="number" step="any" min="0" required>
+        <label for="height">Height</label>
+        <input id="height" name="height" type="number" step="any" min="0" required>
+        <button type="submit" class="btn">Compute</button>
+    </form>
+    {% if area is not none %}
+        <p>Area: <strong>{{ '%.4f'|format(area) }}</strong></p>
+    {% endif %}
+{% endblock %}
+
